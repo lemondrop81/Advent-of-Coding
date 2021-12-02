@@ -17,6 +17,19 @@ def start():
         
         # Split the string up into movement and value
         j = lines[i].split(" ")
+
+        # Checks to see if movement it forward
+        if j[0] == "forward":
+            print("test")
+        
+        # Checks to see if movement is down
+        elif j[0] == "down":
+            print("pie")
+        
+        # Checks to see if movement id up
+        elif j[0] == "up":
+            print("cake")
+
         
 
 start()

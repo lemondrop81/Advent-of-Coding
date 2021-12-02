@@ -1,12 +1,12 @@
-adventofcode
-
+# adventofcode
 advent of code entries
 
 Done as time permits.
 
 https://adventofcode.com/
-2021
+
+## 2021
 
 languages used:
 
-    Python
+* C# via .Net interactive notebooks in vscode

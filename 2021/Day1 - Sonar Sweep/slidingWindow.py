@@ -14,7 +14,12 @@ def start():
 
         # Making sure the loop doesn't go past the end
         if i < (max(x) - 2):
-            
+
+            #Checks to see if the value is larger then the previous ones
+            if depths[i] < depths[i + 3]:
+                total += 1
+
+    print(total)
 
 
     

@@ -1,6 +1,8 @@
 def start():
     values = [1, 2, 1, 4, 5]
 
+    text_file = open("2021\Day1 - Sonar Sweep\Day1.txt","r")
+
     i = range(0, len(values))
     
     total = 0

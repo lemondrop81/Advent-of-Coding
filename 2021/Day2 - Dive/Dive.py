@@ -20,16 +20,20 @@ def start():
 
         # Checks to see if movement it forward
         if j[0] == "forward":
-            print("test")
+            # Goes forward certain amount
+            horizontal += int(j[1])
         
         # Checks to see if movement is down
         elif j[0] == "down":
-            print("pie")
+            # increases depth when submarine goes down
+            depth += int(j[1])
         
-        # Checks to see if movement id up
+        # Checks to see if movement is up
         elif j[0] == "up":
-            print("cake")
+            # subtracts depth when submarine goes up
+            depth -= int(j[1])
 
-        
+    # The final answer
+    print(horizontal * depth)  
 
 start()

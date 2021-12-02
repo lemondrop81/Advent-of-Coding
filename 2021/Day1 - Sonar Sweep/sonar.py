@@ -8,9 +8,12 @@ def start():
     for x in i:
         if x < max(i):
             if values[x] < values[x+1]:
-                print("smaller")
-
-            else:
                 print("larger")
 
+                total += 1
+
+            else:
+                print("smaller")
+
+    print(total)
 start()

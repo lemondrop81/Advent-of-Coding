@@ -13,4 +13,8 @@ def start():
     # Adding to the running total of depth position
     depth = 0
 
+    # The for loop to iterate through every item
+    for i in x:
+        print(lines[i])
+
 start()

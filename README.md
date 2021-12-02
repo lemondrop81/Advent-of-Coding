@@ -9,4 +9,4 @@ https://adventofcode.com/
 
 languages used:
 
-* C# via .Net interactive notebooks in vscode
+* Python

@@ -6,5 +6,11 @@ def start():
 
     x = range(0, len(lines))
 
+    # Adding to the running total of horizontal position
+    horizontal = 0
+
+    # Adding to the running total of depth position
+    depth = 0
+
 
 start()

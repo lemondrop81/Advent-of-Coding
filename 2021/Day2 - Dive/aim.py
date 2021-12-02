@@ -12,5 +12,8 @@ def start():
     # Adding to the running total of depth position
     depth = 0
 
+    #Add the running total for aim
+    aim = 0
+
 
 start()

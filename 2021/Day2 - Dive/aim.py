@@ -15,5 +15,26 @@ def start():
     #Add the running total for aim
     aim = 0
 
+    # The for loop to iterate through every item
+    for i in x:
+        
+        # Split the string up into movement and value
+        j = lines[i].split(" ")
+
+        # Checks to see if movement it forward
+        if j[0] == "forward":
+            # Goes forward certain amount
+            horizontal += int(j[1])
+        
+        # Checks to see if movement is down
+        elif j[0] == "down":
+            # increases depth when submarine goes down
+            depth += int(j[1])
+        
+        # Checks to see if movement is up
+        elif j[0] == "up":
+            # subtracts depth when submarine goes up
+            depth -= int(j[1])
+
 
 start()

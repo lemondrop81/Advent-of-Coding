@@ -25,19 +25,20 @@ def start():
         if j[0] == "forward":
             # Goes forward certain amount
             horizontal += int(j[1])
-            depth = aim * int(j[1])
+            depth += aim * int(j[1])
         
         # Checks to see if movement is down
         elif j[0] == "down":
-            # increases depth when submarine goes down
-            depth += int(j[1])
+            # increases aim when submarine goes down
             aim += int(j[1])
         
         # Checks to see if movement is up
         elif j[0] == "up":
-            # subtracts depth when submarine goes up
-            depth -= int(j[1])
+            # subtracts aim when submarine goes up
             aim -= int(j[1])
 
+
+    # The final answer
+    print(horizontal * depth)  
 
 start()

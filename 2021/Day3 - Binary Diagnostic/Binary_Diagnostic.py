@@ -17,4 +17,11 @@ def start():
             else:
                 ones += 1
 
+        if zeros > ones:
+            gamma += "0"
+            epsilon += "1"
+        
+        else:
+            gamma += "1"
+            epsilon += "0"
 start()

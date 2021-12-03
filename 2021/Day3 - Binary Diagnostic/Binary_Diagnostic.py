@@ -11,7 +11,8 @@ def start():
         zeros = 0
         ones = 0
 
-        print("test")
+        for reading in range(len(lines)):
+            print("test")
 
 
 start()

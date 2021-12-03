@@ -12,7 +12,9 @@ def start():
         ones = 0
 
         for reading in range(len(lines)):
-            print("test")
-
+            if lines[reading][i] == "0":
+                zeros += 1
+            else:
+                ones += 1
 
 start()

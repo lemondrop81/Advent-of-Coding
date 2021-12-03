@@ -24,4 +24,7 @@ def start():
         else:
             gamma += "1"
             epsilon += "0"
+
+    powerConsumption = int(gamma, 2) * int(epsilon, 2)
+    print(powerConsumption)
 start()

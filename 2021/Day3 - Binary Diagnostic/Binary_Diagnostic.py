@@ -7,6 +7,11 @@ def start():
     gamma = ""
     epsilon = ""
 
+    for i in range(len(lines[0]) - 1):
+        zeros = 0
+        ones = 0
+
+        print("test")
 
 
 start()

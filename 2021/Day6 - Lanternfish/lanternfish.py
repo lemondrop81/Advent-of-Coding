@@ -2,6 +2,6 @@
 fishInput = list(map(int,open("2021\Day6 - lanternfish\Day6.txt").read().split(',')))
 
 days = 80
-   
 
-print(f)
+for day in range(days):
+    print("test")

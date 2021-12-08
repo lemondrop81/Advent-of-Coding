@@ -7,6 +7,13 @@ days = 80
 # Creates the list to hold the end value
 fishlist = []
 
+# Sets the age new fish are created at
+fishBornAge = 8
+
+# Sets the age for to reproduce
+fishRespawnAge = 6
+
+
 # iterate through all the fish ages, to count
 for i in range(1, 8):
 

@@ -1,14 +1,10 @@
-def start():
+# Getting the text input
+def get_input():
+    with open("2021\Day6 - lanternfish\Day6.txt", 'r') as f:
+        data = [i for i in f]
+    return [int(i) for i in data[0].split(',')]
 
-    # Getting the text input
-    text_file = open("2021\Day6 - lanternfish\Day6.txt","r")
-    lines = text_file.readlines()
+days = 80
+   
 
-    days = 80
-
-    for i in range(days):
-        print("test")
-    
-
-
-start()
+get_input()

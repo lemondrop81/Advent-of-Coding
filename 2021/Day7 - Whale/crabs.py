@@ -1,21 +1,24 @@
 import statistics
-data = list(map(int,open("2021\Day7 - Whale\Day7.txt").read().split(',')))
+positions = list(map(int,open("2021\Day7 - Whale\Day7.txt").read().split(',')))
 
-def start():
+# precalculate cost of steps
+steps=[0]
+for i in range(1,1500):
+    steps.append(steps[i-1]+i)
 
-    # Calculate what the medium distance is
-    medium = round(statistics.median(data))
-    fuel = 0
+# choose a large number to compare the fuel cost to
+final_fuel=99000000
 
-    # Loop through the range
-    for aim in range(medium - 5, medium + 5):
-        
-        #Loop through the crabs
-       for crab in data:
-           fuel += abs(crab - medium)
+aim_approx=round(statistics.mean(positions))
 
-    # Print out the final value
-    print(fuel)
+# Iterate through the range 
+for aim in range(aim_approx-5, aim_approx+5):
+    fuel=0
+    # iterate through each of the crabs to find the fuel costs
+    for position in positions:
+        fuel+=steps[abs(position-aim)]
+    if fuel<final_fuel:
+        final_fuel = fuel
 
-
-start()
+# Print the fuel costs
+print(final_fuel)

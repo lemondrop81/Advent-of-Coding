@@ -13,5 +13,12 @@ def start():
     # Loop through all the input lines
     for i in lines:
         score = 0
-        print(i)
+        found = []
+
+        # Loop through each individual line
+        for c in i:
+            if c not in [")", "]", "}", ">"]:
+                found.append(c)
+
+
 start()

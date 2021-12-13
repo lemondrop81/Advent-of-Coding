@@ -1,5 +1,4 @@
 
-# Getting the text input
 text_file = open("2021\Day10 - Syntax Scoring\Day10.txt","r")
 lines = text_file.readlines()
 
@@ -17,6 +16,7 @@ score = []
 for i in lines:
     found = []
     count = []
+    error = False
 
     # Loop through each individual line to check if the brackets are the same
     for c in i:
@@ -25,6 +25,8 @@ for i in lines:
 
         elif c in CLOSING and c == CLOSING[OPENING.index(count[-1])]:
             count.pop
+        else:
+            error = True
+            break
 
-    print(c)
 # Print the sum of the scores

@@ -11,7 +11,6 @@ score = []
 
 # Loop through all the input lines
 for i in lines:
-    found = []
     count = []
     error = False
 
@@ -30,5 +29,15 @@ for i in lines:
         for z in count[::-1]:
             # Times the score by 5
             score *= 5
+
+            if z == '(':
+                score += 1
+            elif z == '[':
+                score += 2
+            elif z == '{':
+                score += 3
+            elif z == '<':
+                score += 4
+        
 
 # Print the sum of the scores

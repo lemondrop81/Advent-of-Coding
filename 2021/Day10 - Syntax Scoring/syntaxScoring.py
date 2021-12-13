@@ -1,24 +1,35 @@
-def start():
 
-    # Getting the text input
-    text_file = open("2021\Day10 - Syntax Scoring\Day10.txt","r")
-    lines = text_file.readlines()
-    
-    # Determine the pairs
-    pairs = {"(": ")", "[": "]", "{": "}", "<": ">"}
+# Getting the text input
+text_file = open("2021\Day10 - Syntax Scoring\Day10.txt","r")
+lines = text_file.readlines()
 
-    # Determine the error points
-    points = {")": 3, "]": 57, "}": 1197, ">": 25137}
-    
-    # Loop through all the input lines
-    for i in lines:
-        score = 0
-        found = []
+# Determine the pairs
+pairs = {"(": ")", "[": "]", "{": "}", "<": ">"}
 
-        # Loop through each individual line
-        for c in i:
-            if c not in [")", "]", "}", ">"]:
-                found.append(c)
+# Determine the error points
+points = {")": 3, "]": 57, "}": 1197, ">": 25137}
+
+# Determines the total of the scores
+score = []
+
+# Loop through all the input lines
+for i in lines:
+    found = []
+
+    # Loop through each individual line
+    for c in i:
+        if c not in [")", "]", "}", ">"]:
+            found.append(c)
+
+        else:
+            if c == pairs[found[-1]]:
+                found.pop()
+
+            else:
+                score.append(points[c])
+                found = []
+                break
 
 
-start()
+# Print the sum of the scores
+print(sum(score))

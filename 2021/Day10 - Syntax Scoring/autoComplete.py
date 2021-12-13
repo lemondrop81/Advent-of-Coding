@@ -3,11 +3,12 @@
 text_file = open("2021\Day10 - Syntax Scoring\Day10.txt","r")
 lines = text_file.readlines()
 
-# Determine the pairs
-pairs = {"(": ")", "[": "]", "{": "}", "<": ">"}
+# opening and closing brackets
+OPENING = ['(', '[', '{', '<']
+CLOSING = [')', ']', '}', '>']
 
 # Determine the error points
-points = {")": 1, "]": 2, "}": 3, ">": 4}
+points = {")": 3, "]": 57, "}": 1197, ">": 25137}
 
 # Determines the total of the scores
 score = []
@@ -15,20 +16,12 @@ score = []
 # Loop through all the input lines
 for i in lines:
     found = []
+    count = []
 
     # Loop through each individual line
     for c in i:
-        if c not in [")", "]", "}", ">"]:
-            found.append(c)
-
-        else:
-            if c == pairs[found[-1]]:
-                found.pop()
-
-            else:
-                score.append(points[c])
-                found = []
-                break
+        if c in OPENING:
+            
 
 
 # Print the sum of the scores

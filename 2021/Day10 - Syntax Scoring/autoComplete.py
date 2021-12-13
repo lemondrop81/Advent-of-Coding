@@ -36,5 +36,5 @@ for i in lines:
                 score += 4
         score_list.append(score)
 
-# Print the scores
-print(score_list)
+# Print the sum of the scores
+print(sorted(score_list)[int((len(score_list)-1)/2)])

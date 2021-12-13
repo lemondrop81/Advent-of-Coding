@@ -18,11 +18,13 @@ for i in lines:
     found = []
     count = []
 
-    # Loop through each individual line
+    # Loop through each individual line to check if the brackets are the same
     for c in i:
         if c in OPENING:
-            
+            count.append(c)
 
+        elif c in CLOSING and c == CLOSING[OPENING.index(count[-1])]:
+            count.pop
 
+    print(c)
 # Print the sum of the scores
-print(sum(score))

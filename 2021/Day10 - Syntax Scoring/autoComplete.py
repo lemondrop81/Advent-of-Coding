@@ -6,9 +6,6 @@ lines = text_file.readlines()
 OPENING = ['(', '[', '{', '<']
 CLOSING = [')', ']', '}', '>']
 
-# Determine the error points
-points = {")": 3, "]": 57, "}": 1197, ">": 25137}
-
 # Determines the total of the scores
 score = []
 
@@ -28,5 +25,10 @@ for i in lines:
         else:
             error = True
             break
+
+    if len(count) and not error:
+        for z in count[::-1]:
+            # Times the score by 5
+            score *= 5
 
 # Print the sum of the scores

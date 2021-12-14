@@ -4,10 +4,17 @@ def split(word):
     return [char for char in word]
 
 t = split(data[0]) 
+rules = []
 
+# Loop through and split the rules up
 for x in data:
-    y = x.split(' ')
+     rules.append(x.split(' '))
 
+# remove the first and last strings
+rules.pop(0)
+rules.pop(0)
+rules.pop()
+print(rules)
 
 # Loop through the steps
 for loopCount in range(10):
@@ -16,5 +23,6 @@ for loopCount in range(10):
     i = 0
     # iterate through the polymer template
     while i < len(t) - 1:
-        #print(t[i] + t[i+1])
+        polymer = (t[i] + t[i+1])
+            
         i += 1

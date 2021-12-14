@@ -27,6 +27,10 @@ while i < len(t):
     # iterate through the pair insertion rules
     for rule in rules:
 
+        # Checks if the loop is going out of range
+        if i >= len(t) - 1:
+            break
+
         polymer = (t[i] + t[i+1])
         if rule[0] == polymer:
             # add the character to the middle of the list

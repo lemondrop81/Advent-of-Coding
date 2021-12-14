@@ -16,19 +16,27 @@ rules.pop(0)
 rules.pop()
 
 # Loop through the steps
-for loopCount in range(10):
+#for loopCount in range(10):
    
+# Initial value for the template loop
+i = 0
+
+# iterate through the polymer template
+while i < len(t):
+
     # iterate through the pair insertion rules
     for rule in rules:
 
-        # Initial value for the template loop
-        i = 0
+        polymer = (t[i] + t[i+1])
+        if rule[0] == polymer:
+            # add the character to the middle of the list
+            print(polymer)
+            print(rule)
+            b = t[:]
+            b.insert(i+1, rule[2])
+            t = b
+            print(t)
+            i += 2
+        
 
-         # iterate through the polymer template
-        while i < len(t) - 1:
-            polymer = (t[i] + t[i+1])
-            if rule[0] == polymer:
-                # add the character to the middle of the list
-                t = t[:1] + rule[2] + t[1:]
-
-            i += 1
+    i += 1

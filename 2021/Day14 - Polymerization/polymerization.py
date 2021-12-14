@@ -18,11 +18,17 @@ print(rules)
 
 # Loop through the steps
 for loopCount in range(10):
+   
+    # iterate through the pair insertion rules
+    for rule in rules:
 
-    # Initial value for the template loop
-    i = 0
-    # iterate through the polymer template
-    while i < len(t) - 1:
-        polymer = (t[i] + t[i+1])
-            
-        i += 1
+        # Initial value for the template loop
+        i = 0
+
+         # iterate through the polymer template
+        while i < len(t) - 1:
+            polymer = (t[i] + t[i+1])
+            if rule[0] == polymer:
+                print("test")
+
+            i += 1

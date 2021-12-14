@@ -14,7 +14,6 @@ for x in data:
 rules.pop(0)
 rules.pop(0)
 rules.pop()
-print(rules)
 
 # Loop through the steps
 for loopCount in range(10):
@@ -29,6 +28,7 @@ for loopCount in range(10):
         while i < len(t) - 1:
             polymer = (t[i] + t[i+1])
             if rule[0] == polymer:
-                print("test")
+                # add the character to the middle of the list
+                t = t[:1] + rule[2] + t[1:]
 
             i += 1

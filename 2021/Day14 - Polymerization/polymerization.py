@@ -10,8 +10,9 @@ rules = []
 
 # Loop through and split the rules up
 for x in data:
-     rules.append(x.split(' '))
+     rules.append(x.split(' -> '))
 
+print(rules)
 # remove the first and last strings
 rules.pop(0)
 rules.pop(0)
@@ -25,7 +26,6 @@ for loopCount in range(10):
    
     # Initial value for the template loop
     i = 0
-
     # iterate through the polymer template
     while i < len(t):
 
@@ -43,7 +43,7 @@ for loopCount in range(10):
                 b.insert(i+1, rule[2])
                 count += rule[2]
                 t = b
-                i += 2
+                i += 1
             
 
         i += 1
